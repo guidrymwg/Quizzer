@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
 
+            AstroQA.subjectIndex = 0;
             Intent i = new Intent(this, AstroQA.class);
             startActivity(i);
 
@@ -105,9 +106,13 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_call) {
 
-            String number = "202-456-1111";   // White House phone number
+            AstroQA.subjectIndex = 1;
+            Intent i = new Intent(this, AstroQA.class);
+            startActivity(i);
+
+            /*String number = "202-456-1111";   // White House phone number
             String numberToDial = "tel:" + number;
-            startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(numberToDial)));
+            startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(numberToDial)));*/
 
         } else if (id == R.id.nav_slideshow) {
 
