@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/take_picture" />
+            android:icon="@drawable/ic_star_border_black_24dp"
+            android:title="@string/astro_quiz" />
         <item
             android:id="@+id/nav_call"
-            android:icon="@drawable/ic_contact_phone_black_24dp"
-            android:title="@string/call_wh" />
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="@string/history_quiz" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_exposure_black_24dp"
             android:title="@string/slide_show" />
         <item
             android:id="@+id/nav_drive"
-            android:icon="@drawable/ic_cloud_queue_black_24dp"
+            android:icon="@drawable/ic_terrain_black_24dp"
             android:title="@string/google_drive" />
     </group>
 
