@@ -23,4 +23,12 @@
 
     <string name="snackText">Device will lock in 20 seconds</string>
     <string name="snackButtonText">Lock Immediately</string>
+
+    <string name="main_title">Quiz Me</string>
+    <string name="QA_example">Astro Question (POST)</string>
+    <string name="submitLabel">Submit</string>
+    <string name="nextQuestionLabel">Next Question</string>
+    <string name="resetLabel">Reset Score</string>
+    <string name="noAnswer">You must select an answer before you click the
+		Submit button!</string>
 </resources>

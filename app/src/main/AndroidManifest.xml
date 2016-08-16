@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AstroQA" android:label="Question"> </activity>
+        <activity android:name=".AnswerScreen" android:label="Answer"> </activity>
     </application>
 
 </manifest>
