@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.astro_quiz) {
 
             AstroQA.subjectIndex = 0;
             Intent i = new Intent(this, AstroQA.class);
