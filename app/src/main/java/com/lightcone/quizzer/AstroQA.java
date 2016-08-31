@@ -249,7 +249,10 @@ public class AstroQA extends AppCompatActivity {
     /**************************************************************
      The following methods do the data access and processing
      of the string that is returned from the file in the raw directory. Done on
-     background thread to avoid locking up the main UI thread.
+     background thread to avoid locking up the main UI thread. Maybe not a
+     major issue in this version which is just reading from a local data
+     file, but an alternative version of this app retrieves questions and answers
+     from a server over the web and thus could be subject to delay.
      ***************************************************************/
 
     // Use AsyncTask to perform the data load on a background thread.  The three
