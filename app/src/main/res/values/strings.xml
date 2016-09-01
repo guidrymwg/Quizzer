@@ -20,8 +20,8 @@
     <string name="secTitle2">About</string>
     <string name="play_store">Help</string>
 
-    <string name="snackText">Device will lock in 20 seconds</string>
-    <string name="snackButtonText">Lock Immediately</string>
+    <string name="snackText">Choose a new quiz subject?</string>
+    <string name="snackButtonText">Yes</string>
 
     <string name="main_title">Quiz Me</string>
     <string name="QA_example">Astro Question (POST)</string>
