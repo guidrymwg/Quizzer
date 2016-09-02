@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <array name="quiz_array">
+        <item>@string/astro_quiz</item>
+        <item>@string/history_quiz</item>
+        <item>@string/math_quiz</item>
+        <item>@string/geography_quiz</item>
+        <item>@string/biology_quiz</item>
+    </array>
+</resources>
