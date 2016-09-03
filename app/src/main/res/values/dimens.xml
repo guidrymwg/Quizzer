@@ -6,6 +6,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <!-- Space between intro text and subject choice Spinner -->
     <dimen name="spinner_space">20dp</dimen>
 
     <dimen name="radioButtonLeftPadding">4dp</dimen>

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
         AdapterView.OnItemSelectedListener{
 
     long quizSelected;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         // Spinner to choose quiz
-        Spinner spinner = (Spinner) findViewById(R.id.quiz_spinner);
+        spinner = (Spinner) findViewById(R.id.quiz_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.quiz_array, android.R.layout.simple_spinner_item);
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
-
+        // Add the listener for the Spinner options
         spinner.setOnItemSelectedListener(this);
 
         // Create a floating action button
@@ -99,7 +100,6 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -190,9 +190,9 @@ public class MainActivity extends AppCompatActivity
 
         quizSelected = parent.getItemIdAtPosition(position);
 
-        Log.i("QUIZ","Selected="+quizSelected);
+        Log.i("QZ","Selected="+quizSelected);
 
-        quizChooser();
+        quizChooser(quizSelected);
     }
 
     @Override
@@ -200,12 +200,20 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void quizChooser(){
-        if(quizSelected == 0){
-            Log.i("QUIZ","Selected = Astronomy");
+    public void quizChooser(long selected){
+        Log.i("QZ","Selected="+selected);
+
+        if(selected == 0){
+            Log.i("QZ","Selected = Astronomy");
+            AstroQA.subjectIndex = 0;
+            Intent i = new Intent(this, AstroQA.class);
+            startActivity(i);
         }
-        else if(quizSelected==1){
-            Log.i("QUIZ","Selected = history");
+        else if(selected==1){
+            Log.i("QZ","Selected = history");
+            AstroQA.subjectIndex = 1;
+            Intent j = new Intent(this, AstroQA.class);
+            startActivity(j);
         }
     }
 }
