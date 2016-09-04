@@ -24,12 +24,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,
-        AdapterView.OnItemSelectedListener{
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     long quizSelected = -1;
-    Spinner spinner;
-    boolean quizStarted = false;
+    //Spinner spinner;
+    //boolean quizStarted = false;
     Context context;
 
     @Override
@@ -41,11 +40,7 @@ public class MainActivity extends AppCompatActivity
 
         context = getBaseContext();
 
-        //processMenu();
-
-        Log.i("QZ", "onCreate making spinner");
-
-        // Spinner to choose quiz
+/*        // Spinner to choose quiz
         spinner = (Spinner) findViewById(R.id.quiz_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout.
         // The array of choices is the array quiz_array defined in res/values/arrays.xml
@@ -59,7 +54,7 @@ public class MainActivity extends AppCompatActivity
         // Specify the layout for the dropdown choice menu
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Attach the data adapter to the spinner
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(adapter);*/
 
 
         // Create a floating action button
@@ -205,7 +200,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    // Callback method to be invoked when an item in this view has been selected. This callback
+/*    // Callback method to be invoked when an item in this view has been selected. This callback
     // is invoked only when the newly selected position is different from the previously selected
     // position or if there was no selected item. Call getItemAtPosition(position) to access the
     // data associated with the selected item.
@@ -220,15 +215,15 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, AstroQA.class));
         //}
         quizStarted = true;
-    }
+    }*/
 
-    // Callback method to be invoked when the selection disappears from this view. The selection
+/*    // Callback method to be invoked when the selection disappears from this view. The selection
     // can disappear for instance when touch is activated or when the adapter becomes empty.
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         Log.i("QZ","No selection");
-    }
+    }*/
 
     // Open AlertDialog holding quiz subject options menu and process with anonymous inner class
     private void processMenu(){
@@ -252,8 +247,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        spinner.setSelection(-1);
-        Log.i("QZ", "Starting "+"selection="+spinner.getSelectedItemPosition());
+/*        spinner.setSelection(-1);
+        Log.i("QZ", "Starting "+"selection="+spinner.getSelectedItemPosition());*/
     }
 
     @Override

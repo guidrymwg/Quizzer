@@ -15,17 +15,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="@dimen/small_text"
         android:text="@string/description"
-        android:paddingBottom="@dimen/spinner_space"
         android:id="@+id/textView2" />
 
-    <Spinner
+<!--    <Spinner
         android:id="@+id/quiz_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:spinnerMode="dropdown"/>
+        android:spinnerMode="dropdown"/>-->
 
 </RelativeLayout>
