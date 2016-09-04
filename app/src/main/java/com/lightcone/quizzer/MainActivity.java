@@ -185,35 +185,21 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // Handle selections for quiz subject Spinner
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
         quizSelected = parent.getItemIdAtPosition(position);
-
         Log.i("QZ","Selected="+quizSelected);
 
-        quizChooser(quizSelected);
+        AstroQA.subjectIndex = (int)quizSelected;
+        startActivity(new Intent(this, AstroQA.class));
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
+        Log.i("QZ","Nothing selected");
     }
 
-    public void quizChooser(long selected){
-        Log.i("QZ","Selected="+selected);
-
-        if(selected == 0){
-            Log.i("QZ","Selected = Astronomy");
-            AstroQA.subjectIndex = 0;
-            Intent i = new Intent(this, AstroQA.class);
-            startActivity(i);
-        }
-        else if(selected==1){
-            Log.i("QZ","Selected = history");
-            AstroQA.subjectIndex = 1;
-            Intent j = new Intent(this, AstroQA.class);
-            startActivity(j);
-        }
-    }
 }

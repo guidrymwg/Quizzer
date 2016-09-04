@@ -17,6 +17,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.graphics.Color;
 
 public class AnswerScreen extends AppCompatActivity {
 
@@ -77,8 +80,8 @@ public class AnswerScreen extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 Log.i("SNACK", "Snackbar button was clicked");
-                                Intent i = new Intent(context, MainActivity.class);
-                                startActivity(i);
+                                //Intent i = new Intent(context, MainActivity.class);
+                                startActivity(new Intent(context, MainActivity.class));
                             }
                         }).show();
             }
