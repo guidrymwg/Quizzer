@@ -81,7 +81,8 @@ public class AnswerScreen extends AppCompatActivity {
                             public void onClick(View v) {
                                 Log.i("SNACK", "Snackbar button was clicked");
                                 //Intent i = new Intent(context, MainActivity.class);
-                                startActivity(new Intent(context, MainActivity.class));
+                                //startActivity(new Intent(context, MainActivity.class));
+                                processMenu();  // Pop up Spinner menu of quiz subjects
                             }
                         }).show();
             }
@@ -173,5 +174,25 @@ public class AnswerScreen extends AppCompatActivity {
         tv4.setText("");
         tv4.append(s);
     }
+
+    // Open AlertDialog holding quiz subject options menu and process with anonymous inner class
+    private void processMenu(){
+        new AlertDialog.Builder(this).setTitle(R.string.new_subject)
+                .setItems(R.array.quiz_array,
+                        new DialogInterface.OnClickListener(){
+                            public void onClick(DialogInterface dialoginterface, int i){
+                                AstroQA.subjectIndex = i;
+                                startActivity(new Intent(context, AstroQA.class));
+                                //doMenu(i);
+                            }
+                        }).show();
+    }
+
+/*    // Menu with list of quiz subject options
+    private void doMenu(int index){
+        AstroQA.subjectIndex = index;
+        startActivity(new Intent(this, AstroQA.class));
+
+    }*/
 }
 

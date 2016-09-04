@@ -22,6 +22,7 @@
     <string name="google_plus">Settings</string>
     <string name="secTitle2">About</string>
     <string name="play_store">Help</string>
+    <string name="new_subject">New Subject</string>
 
     <string name="snackText">NEW for new subject. Swipe to dismiss.</string>
     <string name="snackButtonText">New</string>
