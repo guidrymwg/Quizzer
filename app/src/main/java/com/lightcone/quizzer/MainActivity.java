@@ -1,5 +1,8 @@
 package com.lightcone.quizzer;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -24,9 +27,10 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         AdapterView.OnItemSelectedListener{
 
-    long quizSelected = 1;
+    long quizSelected = -1;
     Spinner spinner;
     boolean quizStarted = false;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +39,21 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        context = getBaseContext();
+
+        //processMenu();
+
+        Log.i("QZ", "onCreate making spinner");
+
         // Spinner to choose quiz
         spinner = (Spinner) findViewById(R.id.quiz_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout.
         // The array of choices is the array quiz_array defined in res/values/arrays.xml
         spinner.setDropDownWidth(600);
+        spinner.setSelection(-1);
         // Add the listener for the Spinner options.  The methods onItemSelected
         // and onNothingSelected must be overriden to respond to the clicks on the spinner
-        spinner.setOnItemSelectedListener(this);
+        // spinner.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.quiz_array, android.R.layout.simple_spinner_item);
         // Specify the layout for the dropdown choice menu
@@ -61,14 +72,15 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, R.string.snackText, Snackbar.LENGTH_INDEFINITE)
+                processMenu();
+/*                Snackbar.make(view, R.string.snackText, Snackbar.LENGTH_INDEFINITE)
                         .setAction(R.string.snackButtonText, new View.OnClickListener() {
                             // Handle clicks on snackbar button
                             @Override
                             public void onClick(View v) {
                                 Log.i("SNACK", "Snackbar button was clicked");
                             }
-                        }).show();
+                        }).show();*/
             }
         });
 
@@ -218,32 +230,56 @@ public class MainActivity extends AppCompatActivity
         Log.i("QZ","No selection");
     }
 
+    // Open AlertDialog holding quiz subject options menu and process with anonymous inner class
+    private void processMenu(){
+        new AlertDialog.Builder(this).setTitle(R.string.choose_subject)
+                .setItems(R.array.quiz_array,
+                        new DialogInterface.OnClickListener(){
+                            public void onClick(DialogInterface dialoginterface, int i){
+                                AstroQA.subjectIndex = i;
+                                startActivity(new Intent(context, AstroQA.class));
+                                //doMenu(i);
+                            }
+                        }).show();
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
-        //finish();
+        Log.i("QZ", "Pausing");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        spinner.setSelection(-1);
+        Log.i("QZ", "Starting "+"selection="+spinner.getSelectedItemPosition());
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
+        Log.i("QZ", "Restarting");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.i("QZ", "Stopping");
     }
 
     // Note that this one is not a lifecycle method
     @Override
     protected void onSaveInstanceState (Bundle outState) {
         super.onSaveInstanceState(outState);
+        Log.i("QZ", "Saving instance state");
     }
 
     // Note that this one is not a lifecycle method
     @Override
     protected void onRestoreInstanceState (Bundle inState) {
         super.onRestoreInstanceState(inState);
+        Log.i("QZ", "Restoring instance state");
     }
 
 }

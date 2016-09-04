@@ -74,7 +74,9 @@ public class AnswerScreen extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, R.string.snackText, Snackbar.LENGTH_INDEFINITE)
+                processMenu();  // Pop up Spinner menu of quiz subjects
+
+/*                Snackbar.make(view, R.string.snackText, Snackbar.LENGTH_INDEFINITE)
                         .setAction(R.string.snackButtonText, new View.OnClickListener() {
                             // Handle clicks on snackbar button
                             @Override
@@ -84,7 +86,7 @@ public class AnswerScreen extends AppCompatActivity {
                                 //startActivity(new Intent(context, MainActivity.class));
                                 processMenu();  // Pop up Spinner menu of quiz subjects
                             }
-                        }).show();
+                        }).show();*/
             }
         });
 

@@ -7,8 +7,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="description">This app implements a quizzing application, with the
-    quizzing database stored locally on the device in JSON files. To begin, select a quiz
-        topic from the dropdown menu below.</string>
+    quizzing database stored locally on the device in JSON files. To begin, click the
+        floating button below right to select a quiz topic.</string>
 
     <string name="webadd">eagle.phys.utk.edu/guidry/android</string>
     <string name="astro_quiz">Astronomy Quiz</string>
@@ -22,7 +22,8 @@
     <string name="google_plus">Settings</string>
     <string name="secTitle2">About</string>
     <string name="play_store">Help</string>
-    <string name="new_subject">New Subject</string>
+    <string name="choose_subject">Choose a Subject</string>
+    <string name="new_subject">Choose a New Subject</string>
 
     <string name="snackText">NEW for new subject. Swipe to dismiss.</string>
     <string name="snackButtonText">New</string>
