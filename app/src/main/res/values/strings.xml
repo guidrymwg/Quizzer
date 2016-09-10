@@ -11,11 +11,19 @@
         floating button below right to select a quiz topic.</string>
 
     <string name="webadd">eagle.phys.utk.edu/guidry/android</string>
+
     <string name="astro_quiz">Astronomy Quiz</string>
     <string name="history_quiz">History Quiz</string>
     <string name="math_quiz">Math Quiz</string>
     <string name="geography_quiz">Geography Quiz</string>
     <string name="biology_quiz">Biology Quiz</string>
+
+    <string name="astronomy">Astronomy</string>
+    <string name="history">History</string>
+    <string name="math">Math</string>
+    <string name="geography">Geography</string>
+    <string name="biology">Biology</string>
+
     <string name="slide_show">Math Quiz</string>
     <string name="google_drive">Geography Quiz</string>
     <string name="secTitle1">Preferences</string>

@@ -5,19 +5,23 @@
         <item
             android:id="@+id/astro_quiz"
             android:icon="@drawable/ic_star_border_black_24dp"
-            android:title="@string/astro_quiz" />
+            android:title="@string/astronomy" />
         <item
             android:id="@+id/nav_call"
             android:icon="@drawable/ic_account_balance_black_24dp"
-            android:title="@string/history_quiz" />
+            android:title="@string/history" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_exposure_black_24dp"
-            android:title="@string/slide_show" />
+            android:title="@string/math" />
         <item
             android:id="@+id/nav_drive"
             android:icon="@drawable/ic_terrain_black_24dp"
-            android:title="@string/google_drive" />
+            android:title="@string/geography" />
+        <item
+            android:id="@+id/nav_biology"
+            android:icon="@drawable/ic_filter_vintage_black_24dp"
+            android:title="@string/biology" />
     </group>
 
     <item android:title="@string/secTitle1">

@@ -160,6 +160,15 @@ public class MainActivity extends AppCompatActivity
             startActivity(markerIntent);
         }
 
+        else if (id == R.id.nav_biology) {
+
+            // Open the Play Store
+
+            Intent markerIntent = new Intent(Intent.ACTION_VIEW);
+            markerIntent.setData(Uri.parse("https://play.google.com/store"));
+            startActivity(markerIntent);
+        }
+
         // Close the navigation drawer and return true indicating that the event
         // has been handled.
 
