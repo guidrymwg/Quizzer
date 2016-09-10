@@ -3,23 +3,23 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/astro_quiz"
+            android:id="@+id/astronomy"
             android:icon="@drawable/ic_star_border_black_24dp"
             android:title="@string/astronomy" />
         <item
-            android:id="@+id/nav_call"
+            android:id="@+id/history"
             android:icon="@drawable/ic_account_balance_black_24dp"
             android:title="@string/history" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/mathematics"
             android:icon="@drawable/ic_exposure_black_24dp"
             android:title="@string/math" />
         <item
-            android:id="@+id/nav_drive"
+            android:id="@+id/geography"
             android:icon="@drawable/ic_terrain_black_24dp"
             android:title="@string/geography" />
         <item
-            android:id="@+id/nav_biology"
+            android:id="@+id/biology"
             android:icon="@drawable/ic_filter_vintage_black_24dp"
             android:title="@string/biology" />
     </group>
