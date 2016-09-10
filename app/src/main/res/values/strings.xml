@@ -26,6 +26,7 @@
 
     <string name="slide_show">Math Quiz</string>
     <string name="google_drive">Geography Quiz</string>
+    <string name="secTitle0">Subjects</string>
     <string name="secTitle1">Preferences</string>
     <string name="google_plus">Settings</string>
     <string name="secTitle2">About</string>
