@@ -82,7 +82,7 @@ public class AstroQA extends AppCompatActivity {
     //   2 Mathematics
     //   3 Geography
 
-    public static int subjectIndex = 1;
+    public static int subjectIndex;
     public static int inputFile;      // R.raw.index of JSON file holding questions
 
     @Override
@@ -109,7 +109,7 @@ public class AstroQA extends AppCompatActivity {
 
             case 2:
                 bkg = R.drawable.fractal;
-                inputFile = R.raw.history;
+                inputFile = R.raw.math;
                 break;
         }
 

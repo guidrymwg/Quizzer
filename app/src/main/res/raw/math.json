@@ -1,0 +1,49 @@
+{"responseData":
+    {"questions":[
+
+        {
+            "q": "What is a prime number?",
+            "a": "A number that is evenly divisible by 2.",
+            "b": "A number that is a multiple of pi = 3.1416.",
+            "c": "A number that looks the same written backwards and forwards; for example 616.",
+            "d": "A whole number greater than 1 with only two whole-number factors: itself and 1.",
+            "e": "A number in the sequence 1, 3, 5, 7,  . . .",
+            "coran": "d",
+            "amp": "The first few prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, and 29. Prime numbers play a large role in number theory."
+        },
+
+        {
+            "q": "Alice runs twice as fast as Jim.  If it takes Jim 12 minutes to run a mile, how long will it take Alice to run a mile?",
+            "a": "12 minutes",
+            "b": "6 minutes",
+            "c": "10 minutes",
+            "d": "14 minutes",
+            "e": "24 minutes",
+            "coran": "b",
+            "amp": "Since Alice takes twice as fast, she will take half the time as Jim.  (12 minutes/2) = 6 minutes."
+        },
+
+        {
+            "q": "13 + 12 + (-5) - 2 = ?",
+            "a": "32",
+            "b": "28",
+            "c": "22",
+            "d": "25",
+            "e": "18",
+            "coran": "e",
+            "amp": "13 + 12 + (-5) - 2 = 13 + 12 - 5 - 2 = 18."
+        },
+
+        {
+            "q": "Counting upward from zero, what is the third prime number encountered?",
+            "a": "5",
+            "b": "1",
+            "c": "13",
+            "d": "7",
+            "e": "21",
+            "coran": "a",
+            "amp": "The first four prime numbers are 2, 3, 5, and 7, so the third prime is 5."
+        }
+    ]
+    }
+}
