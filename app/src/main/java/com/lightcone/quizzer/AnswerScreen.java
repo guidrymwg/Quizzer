@@ -1,16 +1,11 @@
 package com.lightcone.quizzer;
 
-
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.graphics.Color;
 
 public class AnswerScreen extends AppCompatActivity {
 
@@ -51,6 +45,10 @@ public class AnswerScreen extends AppCompatActivity {
 
             case 1:
                 bkg = R.drawable.lincoln;
+                break;
+
+            case 2:
+                bkg = R.drawable.fractal;
                 break;
         }
 

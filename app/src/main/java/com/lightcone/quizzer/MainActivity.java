@@ -4,11 +4,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,16 +17,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     long quizSelected = -1;
-    //Spinner spinner;
-    //boolean quizStarted = false;
     Context context;
 
     @Override
@@ -39,23 +32,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         context = getBaseContext();
-
-/*        // Spinner to choose quiz
-        spinner = (Spinner) findViewById(R.id.quiz_spinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout.
-        // The array of choices is the array quiz_array defined in res/values/arrays.xml
-        spinner.setDropDownWidth(600);
-        spinner.setSelection(-1);
-        // Add the listener for the Spinner options.  The methods onItemSelected
-        // and onNothingSelected must be overriden to respond to the clicks on the spinner
-        // spinner.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.quiz_array, android.R.layout.simple_spinner_item);
-        // Specify the layout for the dropdown choice menu
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Attach the data adapter to the spinner
-        spinner.setAdapter(adapter);*/
-
 
         // Create a floating action button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -68,14 +44,6 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 processMenu();
-/*                Snackbar.make(view, R.string.snackText, Snackbar.LENGTH_INDEFINITE)
-                        .setAction(R.string.snackButtonText, new View.OnClickListener() {
-                            // Handle clicks on snackbar button
-                            @Override
-                            public void onClick(View v) {
-                                Log.i("SNACK", "Snackbar button was clicked");
-                            }
-                        }).show();*/
             }
         });
 
@@ -200,31 +168,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-/*    // Callback method to be invoked when an item in this view has been selected. This callback
-    // is invoked only when the newly selected position is different from the previously selected
-    // position or if there was no selected item. Call getItemAtPosition(position) to access the
-    // data associated with the selected item.
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-        quizSelected = parent.getItemIdAtPosition(position);
-        Log.i("QZ","Selected="+quizSelected);
-        //if(quizStarted) {
-            AstroQA.subjectIndex = (int) quizSelected;
-            startActivity(new Intent(this, AstroQA.class));
-        //}
-        quizStarted = true;
-    }*/
-
-/*    // Callback method to be invoked when the selection disappears from this view. The selection
-    // can disappear for instance when touch is activated or when the adapter becomes empty.
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-        Log.i("QZ","No selection");
-    }*/
-
     // Open AlertDialog holding quiz subject options menu and process with anonymous inner class
     private void processMenu(){
         new AlertDialog.Builder(this).setTitle(R.string.choose_subject)
@@ -247,8 +190,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-/*        spinner.setSelection(-1);
-        Log.i("QZ", "Starting "+"selection="+spinner.getSelectedItemPosition());*/
+        Log.i("QZ", "onStart");
     }
 
     @Override

@@ -106,6 +106,11 @@ public class AstroQA extends AppCompatActivity {
                 bkg = R.drawable.lincoln;
                 inputFile = R.raw.history;
                 break;
+
+            case 2:
+                bkg = R.drawable.fractal;
+                inputFile = R.raw.history;
+                break;
         }
 
         // Deal with deprecated methods in setting the background image
