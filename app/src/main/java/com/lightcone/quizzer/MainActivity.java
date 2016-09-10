@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
@@ -89,64 +88,40 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    // Handle clicks on Slide-out Navigation Drawer
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.astronomy) {
-
             Log.i(TAG,"Astronomy nav drawer");
-
         }
 
         else if (id == R.id.history) {
-
             Log.i(TAG,"History nav drawer");
-
         }
 
         else if (id == R.id.mathematics) {
-
             Log.i(TAG,"Math nav drawer");
-
         }
 
         else if (id == R.id.geography) {
-
             Log.i(TAG,"Geography nav drawer");
-
         }
 
         else if (id == R.id.biology) {
-
             Log.i(TAG,"Biology nav drawer");
-
         }
 
-        else if (id == R.id.nav_share) {
-
-            // Will open to my Google+ homepage.  Change gid to your G+ id
-            // to access your G+ page.  To get your id, open Google+ with a
-            // browser and click Profile.  The long number displayed as part
-            // of the URL in the address bar is your G+ id.
-
-            String gid = "101802627488828432585";
-            String add = "https://plus.google.com/" + gid + "/posts";
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(add)));
-
+        else if (id == R.id.nav_settings) {
+            Log.i(TAG,"Settings nav drawer");
         }
 
-        else if (id == R.id.nav_play) {
-
-            // Open the Play Store
-
-            Intent markerIntent = new Intent(Intent.ACTION_VIEW);
-            markerIntent.setData(Uri.parse("https://play.google.com/store"));
-            startActivity(markerIntent);
+        else if (id == R.id.nav_help) {
+            Log.i(TAG,"Help nav drawer");
         }
-
 
         // Close the navigation drawer and return true indicating that the event
         // has been handled.
@@ -155,6 +130,7 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     // Open AlertDialog holding quiz subject options menu and process with anonymous inner class
     private void processMenu(){
