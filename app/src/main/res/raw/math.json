@@ -20,11 +20,11 @@
             "d": "14 minutes",
             "e": "24 minutes",
             "coran": "b",
-            "amp": "Since Alice runs twice as fast, she will take half the time of Jim.  (12 minutes/2) = 6 minutes."
+            "amp": "Since Alice runs twice as fast, she will take half as much time as Jim.  Thus, (12 minutes/2) = 6 minutes."
         },
 
         {
-            "q": "13 + 12 + (-5) - 2 = ?",
+            "q": "Evaluate 13 + 12 + (-5) - 2 = ?",
             "a": "32",
             "b": "28",
             "c": "22",

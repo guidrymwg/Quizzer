@@ -20,7 +20,6 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    //long quizSelected = -1;
     Context context;
     static final String TAG="QUIZZER";
 
@@ -45,7 +44,8 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        // Set up the navigation drawer
+        // Set up the navigation drawer. Handle clicks on it in
+        // onNavigationItemSelected(MenuItem item){} below.
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+
+        // Be sure user doesn't return to an open Nav drawer
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
@@ -67,21 +70,30 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    // Inflate the options menu on the toolbar
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
+    // Handle clicks on options menu to right of toolbar (not presently used)
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            Log.i(TAG,"Top bar settings menu");
             return true;
         }
 
@@ -132,7 +144,9 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    // Open AlertDialog holding quiz subject options menu and process with anonymous inner class
+    // Open AlertDialog holding quiz subject options menu and process with anonymous inner class.
+    // This will choose the quiz subject from popup menu.
+    
     private void processMenu(){
         new AlertDialog.Builder(this).setTitle(R.string.choose_subject)
                 .setItems(R.array.quiz_array,
@@ -140,7 +154,6 @@ public class MainActivity extends AppCompatActivity
                             public void onClick(DialogInterface dialoginterface, int i){
                                 AstroQA.subjectIndex = i;
                                 startActivity(new Intent(context, AstroQA.class));
-                                //doMenu(i);
                             }
                         }).show();
     }
@@ -148,39 +161,39 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i("QZ", "Pausing");
+        Log.i(TAG, "Pausing");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("QZ", "onStart");
+        Log.i(TAG, "onStart");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.i("QZ", "Restarting");
+        Log.i(TAG, "Restarting");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("QZ", "Stopping");
+        Log.i(TAG, "Stopping");
     }
 
     // Note that this one is not a lifecycle method
     @Override
     protected void onSaveInstanceState (Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.i("QZ", "Saving instance state");
+        Log.i(TAG, "Saving instance state");
     }
 
     // Note that this one is not a lifecycle method
     @Override
     protected void onRestoreInstanceState (Bundle inState) {
         super.onRestoreInstanceState(inState);
-        Log.i("QZ", "Restoring instance state");
+        Log.i(TAG, "Restoring instance state");
     }
 
 }

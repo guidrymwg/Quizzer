@@ -33,7 +33,6 @@ public class AstroQA extends AppCompatActivity {
     public static final String TAG = "QUIZME";
 
     // Questioner data holders
-    private String qnum;
     protected static String question;
     protected static String answer[] = new String[5];
     protected static String chapter = "4";
@@ -49,14 +48,17 @@ public class AstroQA extends AppCompatActivity {
     protected static int correctIndex = -1;
     private ProgressBar progressBar;
     private Context context;
+    private boolean isRetrieving = false;
 
-    // Logic in Settings (Preferences) menu
+    // Following variables are settings variables that are holdovers from the
+    // google glass version.  Not presently used.
+
     private boolean onSplash = true;
     private boolean speakQuestions;
     private boolean expertMode;
     private boolean onAnswerPage = false;
     private boolean hasAmplification = false;
-    private boolean isRetrieving = false;
+
 
     // Scoring
     public static int numberRight = 0;
@@ -77,6 +79,7 @@ public class AstroQA extends AppCompatActivity {
     private JSONArray arrayJSON;
 
     // Subject index for questions:
+
     //   0 Astronomy
     //   1 History
     //   2 Mathematics
@@ -104,7 +107,7 @@ public class AstroQA extends AppCompatActivity {
                 break;
 
             case 1:
-                bkg = R.drawable.lincoln;
+                bkg = R.drawable.lincoln2;
                 inputFile = R.raw.history;
                 break;
 
@@ -124,14 +127,15 @@ public class AstroQA extends AppCompatActivity {
                 break;
         }
 
-        // Deal with deprecated methods in setting the background image
+        // Deal with deprecated methods in setting the background image depending
+        // on Android version number.
 
         final int sdk = android.os.Build.VERSION.SDK_INT;
 		RelativeLayout layout =(RelativeLayout)findViewById(R.id.RelativeLayout1);
 		if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 			layout.setBackgroundDrawable( getResources().getDrawable(bkg) );
 		} else {
-			layout.setBackground( getResources().getDrawable(bkg) );
+			layout.setBackground( getResources().getDrawable(bkg, null) );
 		}
 
         // Set up a TextView to hold the question

@@ -51,7 +51,7 @@ public class AnswerScreen extends AppCompatActivity {
                 break;
 
             case 1:
-                bkg = R.drawable.lincoln;
+                bkg = R.drawable.lincoln2;
                 break;
 
             case 2:
@@ -74,32 +74,16 @@ public class AnswerScreen extends AppCompatActivity {
         if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
             layout.setBackgroundDrawable( getResources().getDrawable(bkg) );
         } else {
-            layout.setBackground( getResources().getDrawable(bkg) );
+            layout.setBackground( getResources().getDrawable(bkg, null) );
         }
 
-        // Create a floating action button
+        // Create a floating action button and add a click listener
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabnew);
-
-        // Add a click listener to the floating action button that launches a snackbar
-        // and sets a listener on it to deal with clicks on the action button of the
-        // snackbar.
-
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 processMenu();  // Pop up Spinner menu of quiz subjects
 
-/*                Snackbar.make(view, R.string.snackText, Snackbar.LENGTH_INDEFINITE)
-                        .setAction(R.string.snackButtonText, new View.OnClickListener() {
-                            // Handle clicks on snackbar button
-                            @Override
-                            public void onClick(View v) {
-                                Log.i("SNACK", "Snackbar button was clicked");
-                                //Intent i = new Intent(context, MainActivity.class);
-                                //startActivity(new Intent(context, MainActivity.class));
-                                processMenu();  // Pop up Spinner menu of quiz subjects
-                            }
-                        }).show();*/
             }
         });
 
@@ -198,16 +182,9 @@ public class AnswerScreen extends AppCompatActivity {
                             public void onClick(DialogInterface dialoginterface, int i){
                                 AstroQA.subjectIndex = i;
                                 startActivity(new Intent(context, AstroQA.class));
-                                //doMenu(i);
                             }
                         }).show();
     }
 
-/*    // Menu with list of quiz subject options
-    private void doMenu(int index){
-        AstroQA.subjectIndex = index;
-        startActivity(new Intent(this, AstroQA.class));
-
-    }*/
 }
 
