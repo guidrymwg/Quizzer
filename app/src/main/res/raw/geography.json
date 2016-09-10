@@ -1,0 +1,60 @@
+{"responseData":
+    {"questions":[
+
+        {
+            "q": "What is the capital of the state of Kansas?",
+            "a": "Kansas City",
+            "b": "Manhattan",
+            "c": "Topeka",
+            "d": "Wichita",
+            "e": "Dodge City",
+            "coran": "c",
+            "amp": "Topeka has a population of almost 130,000."
+        },
+
+        {
+            "q": "How many continents are there?",
+            "a": "3",
+            "b": "15",
+            "c": "4",
+            "d": "8",
+            "e": "7",
+            "coran": "e",
+            "amp": "The 7 continents are Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, and South America. Some geographers reduce this to 6 by combining Europe and Asia into 'Eurasia', since they are on the same landmass."
+        },
+
+        {
+            "q": "What is the most populous city in Asia?",
+            "a": "Shanghai",
+            "b": "Moscow",
+            "c": "Tokyo",
+            "d": "Seoul",
+            "e": "Beijing",
+            "coran": "a",
+            "amp": "Shanghai has a population of about 24 million as of 2013, which is the largest municipal population of any city in the world. Moscow is not in Asia; it is in Europe!"
+        },
+
+        {
+            "q": "Which continent has the smallest land area?",
+            "a": "Australia",
+            "b": "Europe",
+            "c": "Antarctica",
+            "d": "North America",
+            "e": "Africa",
+            "coran": "a",
+            "amp": "Australia is somewhat smaller than Europe. It is less than 1/12 the size of the largest continent, Asia."
+        },
+
+        {
+            "q": "Which continent has the largest population?",
+            "a": "Europe",
+            "b": "Antarctica",
+            "c": "South America",
+            "d": "Asia",
+            "e": "Africa",
+            "coran": "d",
+            "amp": "The population of Asia was more than 4 billion people as of 2015.  In contrast, the population of Antarctica is less than 5000 people."
+        }
+    ]
+    }
+}

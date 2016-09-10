@@ -1,0 +1,49 @@
+{"responseData":
+    {"questions":[
+
+        {
+            "q": "What is taxonomy?",
+            "a": "The study of how DNA affects evolution",
+            "b": "The Study of tax law as it applies to monkeys",
+            "c": "The study of plants",
+            "d": "The study of reproduction in mammals",
+            "e": "The grouping biological organisms according to shared characteristics",
+            "coran": "e",
+            "amp": "The word comes from the ancient Greek for 'arrangement' (taxis) and 'naming' (nomia)."
+        },
+
+        {
+            "q": "Modern biology regards ___ as the fundamental unit of heredity.",
+            "a": "Genes",
+            "b": "Cells",
+            "c": "RNA",
+            "d": "Amino acids",
+            "e": "Homeostasis",
+            "coran": "a",
+            "amp": "Genes transmit the fundamental genetic information of life forms."
+        },
+
+        {
+            "q": "In modern biology, the fundamental engine driving the creation of new species is?",
+            "a": "Homeostasis",
+            "b": "Cell division",
+            "c": "Metabolism",
+            "d": "Evolution",
+            "e": "Osmosis",
+            "coran": "d",
+            "amp": "The study of evolution is concerned with the origin and descent of species, and their change over time"
+        },
+
+        {
+            "q": "Proteins are sequences of ___?",
+            "a": "Carbohydrates",
+            "b": "Amino acids",
+            "c": "Sugars",
+            "d": "Ribosomes",
+            "e": "RNA",
+            "coran": "b",
+            "amp": "Cells transcribe a DNA gene into an RNA version of the gene; ribosomes then translate the RNA into a protein, which is a sequence of amino acids."
+        }
+    ]
+    }
+}

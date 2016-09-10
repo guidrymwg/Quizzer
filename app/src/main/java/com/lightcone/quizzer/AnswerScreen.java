@@ -36,6 +36,13 @@ public class AnswerScreen extends AppCompatActivity {
 
         context = getBaseContext();
 
+        // Subject index for questions:
+        //   0 Astronomy
+        //   1 History
+        //   2 Mathematics
+        //   3 Geography
+        //   4 Biology
+
         // Choose the background image
         switch(AstroQA.subjectIndex){
 
@@ -53,9 +60,11 @@ public class AnswerScreen extends AppCompatActivity {
 
             case 3:
                 bkg = R.drawable.india;
+                break;
 
             case 4:
                 bkg = R.drawable.helix;
+                break;
         }
 
         // Deal with deprecated methods in setting the background image
