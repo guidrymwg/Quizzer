@@ -50,6 +50,12 @@ public class AnswerScreen extends AppCompatActivity {
             case 2:
                 bkg = R.drawable.fractal;
                 break;
+
+            case 3:
+                bkg = R.drawable.india;
+
+            case 4:
+                bkg = R.drawable.helix;
         }
 
         // Deal with deprecated methods in setting the background image
